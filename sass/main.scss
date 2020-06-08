@@ -1,11 +1,10 @@
 @use 'base/reset';
 @use 'base/typography';
 
-@import url('../themes/nord.css'); //default theme
+$terminal-width: 40rem;
 
-$header-font-size: 24px;
-$body-font-size: 16px;
-$input-font-size: 18px;
+@import url('../themes/nord.css'); //set default theme
+@include typography.set-font-size(24px, 16px, 18px); //set font sizes
 
 * {
 	box-sizing: border-box !important;
@@ -15,11 +14,6 @@ $input-font-size: 18px;
 
 header {
 	font-weight: 700;
-	font-size: $header-font-size;
-}
-
-footer {
-	font-size: $body-font-size;
 }
 
 /* ============================== MAIN CONTENT ============================== */
@@ -38,9 +32,8 @@ footer {
 
 #main {
 	@include flex(column);
-	width: 80%;
+	width: $terminal-width;
 	gap: 1em;
-	font-size: $body-font-size;
 }
 
 #status-bar {
@@ -50,10 +43,13 @@ footer {
 /* ============================== TERMINAL ============================== */
 #terminal {
 	@include flex(column);
-	gap: 1.5em;
-	padding: 1.5em;
-	padding-top: 2em;
+	gap: 1.2em;
+	padding: 1em;
+	padding-top: 1.5em;
 	border-radius: 8px;
+	#text {
+		line-height: 30px;
+	}
 }
 
 #input-container {
@@ -65,11 +61,28 @@ footer {
 	flex-grow: 1;
 	padding: 0.5em 0.8em 0.5em 0.8em;
 	border-radius: 4px;
-	font-size: $input-font-size;
 }
 
 #redo-btn {
 	padding: 0.5em 1em 0.5em 1em;
 	border-radius: 4px;
-	font-size: $input-font-size;
+}
+
+/* ============================== MEDIA QUERIES ============================== */
+@media (max-width: $terminal-width) {
+	#main {
+		width: 95%;
+	}
+}
+
+@media (max-width: 450px) {
+	#status-bar {
+		@include flex(column);
+		align-items: center;
+		gap: 1em;
+	}
+	#input-container {
+		@include flex(column);
+	}
+	@include typography.set-font-size(22px, 14px, 16px);
 }

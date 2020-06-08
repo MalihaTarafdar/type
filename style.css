@@ -71,6 +71,26 @@ table {
   font-weight: normal;
   src: url("./fonts/Menlo-Regular.woff") format("woff");
 }
+header {
+  font-size: 24px;
+}
+
+footer {
+  font-size: 16px;
+}
+
+#main {
+  font-size: 16px;
+}
+
+#terminal-input {
+  font-size: 18px;
+}
+
+#redo-btn {
+  font-size: 18px;
+}
+
 * {
   box-sizing: border-box !important;
   border: none;
@@ -79,11 +99,6 @@ table {
 
 header {
   font-weight: 700;
-  font-size: 24px;
-}
-
-footer {
-  font-size: 16px;
 }
 
 /* ============================== MAIN CONTENT ============================== */
@@ -100,9 +115,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 80%;
+  width: 40rem;
   gap: 1em;
-  font-size: 16px;
 }
 
 #status-bar {
@@ -116,10 +130,13 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5em;
-  padding: 1.5em;
-  padding-top: 2em;
+  gap: 1.2em;
+  padding: 1em;
+  padding-top: 1.5em;
   border-radius: 8px;
+}
+#terminal #text {
+  line-height: 30px;
 }
 
 #input-container {
@@ -133,13 +150,53 @@ footer {
   flex-grow: 1;
   padding: 0.5em 0.8em 0.5em 0.8em;
   border-radius: 4px;
-  font-size: 18px;
 }
 
 #redo-btn {
   padding: 0.5em 1em 0.5em 1em;
   border-radius: 4px;
-  font-size: 18px;
+}
+
+/* ============================== MEDIA QUERIES ============================== */
+@media (max-width: 40rem) {
+  #main {
+    width: 95%;
+  }
+}
+@media (max-width: 450px) {
+  #status-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  header {
+    font-size: 22px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  #main {
+    font-size: 14px;
+  }
+
+  #terminal-input {
+    font-size: 16px;
+  }
+
+  #redo-btn {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,3 +18,21 @@
 	font-weight: normal;
 	src: url('./fonts/Menlo-Regular.woff') format('woff');
 }
+
+@mixin set-font-size($header-font-size, $body-font-size, $input-font-size) {
+	header {
+		font-size: $header-font-size;
+	}
+	footer {
+		font-size: $body-font-size;
+	}
+	#main {
+		font-size: $body-font-size;
+	}
+	#terminal-input {
+		font-size: $input-font-size;
+	}
+	#redo-btn {
+		font-size: $input-font-size;
+	}
+}
