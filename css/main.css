@@ -56,19 +56,19 @@ table {
   font-family: "Input Mono";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/InputMono-Regular.ttf") format("ttf");
+  src: url("../fonts/InputMono-Regular.ttf") format("ttf");
 }
 @font-face {
   font-family: "Monaco";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/Monaco.woff") format("woff");
+  src: url("../fonts/Monaco.woff") format("woff");
 }
 @font-face {
   font-family: "Menlo";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/Menlo-Regular.woff") format("woff");
+  src: url("../fonts/Menlo-Regular.woff") format("woff");
 }
 header {
   font-size: 24px;
