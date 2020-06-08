@@ -5,24 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Type</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./themes/nord.css"> <!-- set default theme -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div id="container">
-		<header>Type</header>
+		<div id="header">
+			<button id="profiles" class="highlight-btn">
+				Profiles
+				<span>&gt;</span>
+			</button>
+			<header>Type</header>
+			<button id="stats" class="highlight-btn">
+				<span>&lt;</span>
+				Statistics
+			</button>
+		</div>
 
 		<div id="main">
 			<div id="status-bar">
-				<div id="modes">
-					10 / 20 / 30 / 40 / 50
-				</div>
-				<div id="stats">
-					WPM: XX / ACC: XX
+				<button id="modes" class="highlight-btn" mode="wordcount">
+					Words Remaining: XX
+				</button>
+				<div id="quick-stats">
+					<span id="wpm">WPM: XX</span>
+					|
+					<span id="acc">ACC: XX</span>
 				</div>
 			</div>
 			<div id="terminal">
 				<div id="text">
-					lorem ipsum dolor sit amet consectetur adipisicing elit
+					lorem ipsum dolor sit amet consectetur adipisicing elit est sit
 				</div>
 				<div id="input-container">
 					<input id="terminal-input" type="text"
@@ -33,9 +46,9 @@
 		</div>
 
 		<footer>
-			<span>Settings</span>
-			/
-			<span>Themes</span>
+			<button class="highlight-btn">Settings</button>
+			|
+			<button class="highlight-btn">Themes</button>
 		</footer>
 	</div>
 	<script src="index.js"></script>

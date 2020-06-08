@@ -3,7 +3,8 @@
 	--text-color: #ECEFF4;
 	--terminal-color: #2E3440;
 	--input-color: #3B4252;
-	--btn-color: #3B4252;
+	--redo-color: #3B4252;
+	--highlight-color: #4d8ee9;
 }
 
 #container {
@@ -21,6 +22,10 @@
 }
 
 #redo-btn {
-	background-color: var(--btn-color);
+	background-color: var(--redo-color);
 	color: var(--text-color);
+}
+
+.highlight-btn {
+	color: var(--highlight-color);
 }
