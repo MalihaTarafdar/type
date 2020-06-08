@@ -1,0 +1,26 @@
+:root {
+	--bg-color: #1A1A1A;
+	--text-color: #FFFFFF;
+	--terminal-color: #333333;
+	--input-color: #1A1A1A;
+	--btn-color: #1A1A1A;
+}
+
+#container {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+#terminal {
+	background-color: var(--terminal-color);
+}
+
+#terminal-input {
+	background-color: var(--input-color);
+	color: var(--text-color);
+}
+
+#redo-btn {
+	background-color: var(--btn-color);
+	color: var(--text-color);
+}
