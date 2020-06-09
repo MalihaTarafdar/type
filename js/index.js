@@ -7,4 +7,6 @@ function setTheme(themeName) {
 	}
 }
 
-setTheme('nord')
+document.addEventListener('DOMContentLoaded', () => {
+	setTheme('nord')
+})

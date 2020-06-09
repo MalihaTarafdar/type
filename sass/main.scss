@@ -48,33 +48,33 @@ button {
 #main {
 	@include flex(column);
 	width: $terminal-width;
-	margin-top: -40px;
-	gap: 1em;
+	margin-top: -20px;
 }
 
 #status-bar {
 	@include flex(row);
+	padding-bottom: 1.2em;
 }
 
 /* ============================== TERMINAL ============================== */
 #terminal {
 	@include flex(column);
-	gap: 1.2em;
 	padding: 1em;
-	padding-top: 1.5em;
+	padding-top: 1.2em;
 	border-radius: 6px;
 	#text {
 		line-height: 30px;
+		padding-bottom: 1.2em;
 	}
 }
 
 #input-container {
 	@include flex(row);
-	gap: 1em;
 }
 
 #terminal-input {
 	flex-grow: 1;
+	margin-right: 1em;
 	padding: 0.5em 0.8em 0.5em 0.8em;
 	border-radius: 4px;
 }
@@ -95,10 +95,16 @@ button {
 	#status-bar {
 		@include flex(column);
 		align-items: center;
-		gap: 1em;
+		#modes {
+			padding-bottom: 1em;
+		}
 	}
 	#input-container {
 		@include flex(column);
+		#terminal-input {
+			margin-right: 0em;
+			margin-bottom: 0.5em;
+		}
 	}
 	@include typography.set-font-size(22px, 14px, 16px);
 }

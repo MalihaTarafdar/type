@@ -10,7 +10,7 @@
   --neutral-color: #B38DAC;
 }
 
-#container {
+body, #container {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
