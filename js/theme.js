@@ -1,4 +1,4 @@
-export let themes = new Map()
+const themes = new Map()
 themes.set('nord', {
 	"--bg-color": "#242933",
 	"--text-color": "#ECEFF4",
@@ -21,3 +21,10 @@ themes.set('dark', {
 	"--incorrect-color": "#C6262E",
 	"--neutral-color": "#A56DE2"
 })
+
+export function setTheme(themeName) {
+	const theme = themes.get(themeName)
+	for (const property in theme) {
+		document.documentElement.style.setProperty(property, theme[property])
+	}
+}

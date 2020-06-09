@@ -1,12 +1,12 @@
-import { themes } from "./themes.js";
+import { setTheme } from "./theme.js";
 
-function setTheme(themeName) {
-	const theme = themes.get(themeName)
-	for (const property in theme) {
-		document.documentElement.style.setProperty(property, theme[property])
-	}
-}
+const input = document.querySelector('#terminal-input')
+const text = document.querySelector('#terminal > #text')
 
 document.addEventListener('DOMContentLoaded', () => {
 	setTheme('nord')
+	//shortcut to focus input
+	document.addEventListener('keypress', (e) => {
+		if (e.key === 'f') input.focus()
+	})
 })
