@@ -9,7 +9,7 @@ export default class WordCountMode {
 		await this.setWordList()
 	}
 	async setWordList() {
-		const res = await fetch(`../texts/words/list${Math.floor(Math.random() * this.WORDLIST_COUNT) + 1}.txt`)
+		const res = await fetch(`texts/words/list${Math.floor(Math.random() * this.WORDLIST_COUNT) + 1}.txt`)
 		if (!res.ok) return
 		const text = await res.text()
 		let word = ""
