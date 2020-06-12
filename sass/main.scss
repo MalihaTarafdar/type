@@ -29,11 +29,12 @@ button {
 	justify-content: space-between;
 }
 
-/* ============================== HEADER ============================== */
-#header {
+/* ============================== HEADER & FOOTER ============================== */
+header {
 	@include flex(row);
 	width: 100%;
-	header {
+	padding-bottom: 3em;
+	#title {
 		font-weight: 700;
 	}
 }
@@ -49,7 +50,6 @@ button {
 #main {
 	@include flex(column);
 	width: $terminal-width;
-	margin-top: -20px;
 }
 
 #status-bar {
@@ -65,19 +65,18 @@ button {
 	border-radius: 6px;
 	#text {
 		line-height: 30px;
-		padding-bottom: 1.2em;
 	}
 }
 
 #input-container {
 	@include flex(row);
-}
-
-#terminal-input {
-	flex-grow: 1;
-	margin-right: 1em;
-	padding: 0.5em 0.8em 0.5em 0.8em;
-	border-radius: 4px;
+	margin-top: 1.2em;
+	#input {
+		flex-grow: 1;
+		margin-right: 1.2em;
+		padding: 0.5em 0.8em 0.5em 0.8em;
+		border-radius: 4px;
+	}
 }
 
 #redo-btn {
@@ -86,9 +85,13 @@ button {
 }
 
 /* ============================== MEDIA QUERIES ============================== */
-@media (max-width: $terminal-width) {
+@media (max-width: $terminal-width + 4rem) {
 	#main {
 		width: 95%;
+	}
+	footer {
+		padding-top: 3em;
+		padding-bottom: 1em;
 	}
 }
 
@@ -102,7 +105,7 @@ button {
 	}
 	#input-container {
 		@include flex(column);
-		#terminal-input {
+		#input {
 			margin-right: 0em;
 			margin-bottom: 0.5em;
 		}

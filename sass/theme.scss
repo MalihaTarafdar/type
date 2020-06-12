@@ -17,11 +17,10 @@ body, #container {
 
 #terminal {
 	background-color: var(--terminal-color);
-}
-
-#terminal-input {
-	background-color: var(--input-color);
-	color: var(--text-color);
+	#input {
+		background-color: var(--input-color);
+		color: var(--text-color);
+	}
 }
 
 #redo-btn {
