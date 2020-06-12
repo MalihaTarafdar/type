@@ -1,0 +1,11 @@
+{
+	"--bg-color": "#242933",
+	"--text-color": "#ECEFF4",
+	"--terminal-color": "#2E3440",
+	"--input-color": "#3B4252",
+	"--redo-color": "#3B4252",
+	"--highlight-color": "#4d8ee9",
+	"--correct-color": "#A3BE8C",
+	"--incorrect-color": "#BF616A",
+	"--neutral-color": "#B38DAC"
+}
