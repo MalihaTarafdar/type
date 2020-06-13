@@ -20,5 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	new _ShortcutHandler()
 	redo.addEventListener('click', () => {
 		wc.reset(text, input)
+		console.log('reset')
 	})
 })
