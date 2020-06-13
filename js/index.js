@@ -4,6 +4,7 @@ import WordCountMode from './wordcount.js'
 
 const text = document.querySelector('#terminal > #text')
 const input = document.querySelector('#terminal > #input-container > #input')
+const redo = document.querySelector('#redo-btn')
 
 class _ShortcutHandler extends ShortcutHandler {
 	onInputFocus() {
@@ -14,6 +15,10 @@ class _ShortcutHandler extends ShortcutHandler {
 
 document.addEventListener('DOMContentLoaded', () => {
 	setTheme('nord')
-	new WordCountMode(input).setText(10, text)
+	let wc = new WordCountMode(input)
+	wc.setText(10, text)
 	new _ShortcutHandler()
+	redo.addEventListener('click', () => {
+		wc.reset(text, input)
+	})
 })

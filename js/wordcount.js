@@ -3,24 +3,43 @@ export default class WordCountMode {
 		this.WORDLIST_COUNT = 1
 		this.wordList = []
 		this.cur = 0
+		const wordsRemainingDisplay = document.querySelector('#modes')
 		input.addEventListener('keypress', e => {
-			if (e.key === ' ') {
+			if (this.cur < this.wordList.length && e.key === ' ') {
 				//delay to clear input
 				setTimeout(() => {
 					input.value = ''
-				}, 50);
+				}, 50)
 				this.check(text)
 				this.next(text)
+				wordsRemainingDisplay.textContent = `Words Remaining: ${this.wordList.length - this.cur}`
+			} else if (this.cur === this.wordList.length - 1) {
+				setTimeout(() => {
+					console.log(input.value, this.wordList[this.cur])
+					this.check(text)
+					this.showStats()
+				}, 50)
+				wordsRemainingDisplay.textContent = `Words Remaining: ${0}`
 			}
 		})
 	}
 
-	reset() {
+	showStats() {
+		const wpmDisplay = document.querySelector('#wpm')
+		const accDisplay = document.querySelector('#acc')
+	}
 
+	reset(text, input) {
+		this.setText(this.wordList.length, text)
+		this.cur = 0
+		input.value = ''
+		input.focus()
 	}
 
 	check(text) {
 		const word = text.querySelector(`span:nth-child(${this.cur + 1})`)
+		word.classList.remove('correct')
+		word.classList.remove('incorrect')
 		word.classList.add((this.wordList[this.cur] === input.value) ? 'correct' : 'incorrect')
 		word.classList.remove('current')
 	}
@@ -55,5 +74,7 @@ export default class WordCountMode {
 		}
 		this.wordList.sort(() => 0.5 - Math.random())
 		this.wordList.length = wordCount
+		const wordsRemainingDisplay = document.querySelector('#modes')
+		wordsRemainingDisplay.textContent = `Words Remaining: ${this.wordList.length - this.cur}`
 	}
 }
