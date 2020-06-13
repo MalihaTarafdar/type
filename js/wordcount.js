@@ -12,7 +12,7 @@ export default class WordCountMode {
 				//delay to clear input
 				setTimeout(() => {
 					input.value = ''
-				}, 50)
+				}, 20)
 				this.check(text)
 				this.next(text)
 				wordsRemainingDisplay.textContent = `Words Remaining: ${this.wordList.length - this.cur}`
@@ -22,7 +22,7 @@ export default class WordCountMode {
 						this.check(text)
 						this.showStats()
 					}
-				}, 50)
+				}, 20)
 				wordsRemainingDisplay.textContent = `Words Remaining: ${0}`
 			}
 		})
@@ -33,6 +33,7 @@ export default class WordCountMode {
 		const accDisplay = document.querySelector('#acc')
 		const seconds = (Date.now() - this.startTime) / 1000
 		wpmDisplay.textContent = `WPM: ${Math.floor(this.correctCharacters / 5 / seconds * 60)}`
+		console.log(this.correctCharacters, this.totalCharacters)
 		accDisplay.textContent = `ACC: ${Math.floor(this.correctCharacters / this.totalCharacters * 100)}`
 	}
 

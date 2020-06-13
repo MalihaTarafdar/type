@@ -1,5 +1,5 @@
 # Type
-A minimalistic and customizable typing test web app
+A highly configurable and minimalistic typing game with advanced statistics.
 
 ## Features
 * Different modes
@@ -8,4 +8,6 @@ A minimalistic and customizable typing test web app
 * Advanced statistics
 * Saving sessions through 'profiles'
 
-Inspiration from typings.gg [https://github.com/briano1905/typings](https://github.com/briano1905/typings)
+---
+
+v1.0
