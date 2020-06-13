@@ -112,7 +112,7 @@ body, #container {
   color: var(--incorrect-color);
 }
 
-.neutral {
+.current {
   color: var(--neutral-color);
 }
 
@@ -150,6 +150,7 @@ footer {
   font-family: "Menlo", "Monaco", "Input Mono", monospace !important;
 }
 
+/* ============================== COMPONENTS ============================== */
 button {
   cursor: pointer;
 }

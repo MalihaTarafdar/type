@@ -12,6 +12,13 @@ $terminal-width: 40rem;
 	font-family: 'Menlo', 'Monaco', 'Input Mono', monospace !important;
 }
 
+@mixin flex($direction) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: space-between;
+}
+
+/* ============================== COMPONENTS ============================== */
 button {
 	cursor: pointer;
 }
@@ -21,12 +28,6 @@ button {
 	padding: 0;
 	background: none;
 	font-size: inherit;
-}
-
-@mixin flex($direction) {
-	display: flex;
-	flex-direction: $direction;
-	justify-content: space-between;
 }
 
 /* ============================== HEADER & FOOTER ============================== */
