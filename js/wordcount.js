@@ -9,6 +9,10 @@ export default class WordCountMode {
 		input.addEventListener('keypress', e => {
 			if (this.startTime === undefined) this.startTime = Date.now()
 			if (this.cur < this.wordList.length - 1 && e.key === ' ') {
+				if (input.value === '') {
+					e.preventDefault()
+					return
+				}
 				//delay to clear input
 				setTimeout(() => {
 					input.value = ''
